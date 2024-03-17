@@ -9,6 +9,8 @@ class CustomElevatedButton extends StatelessWidget {
   final VoidCallback onPressed;
   final Color textColor;
   final Color backgroundColor;
+  final double elevation;
+  final bool showBorder;
 
   const CustomElevatedButton({
     super.key,
@@ -16,6 +18,8 @@ class CustomElevatedButton extends StatelessWidget {
     required this.onPressed,
     this.textColor = Colors.white,
     this.backgroundColor = kPrimaryColor,
+    this.elevation = 1.0,
+    this.showBorder = false,
   });
 
   @override
@@ -28,7 +32,9 @@ class CustomElevatedButton extends StatelessWidget {
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8.0),
+            side: showBorder ? BorderSide(color: kPrimaryColor) : BorderSide.none,
           ),
+          elevation: elevation
         ),
         child: Text(
           text,

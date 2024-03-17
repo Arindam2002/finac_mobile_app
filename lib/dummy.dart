@@ -20,6 +20,28 @@ class Ledger {
   Ledger(this.name);
 }
 
+class StatementDetail {
+  final String date;
+  final String name;
+  final double debit;
+  final double credit;
+  final double balance;
+  final String description;
+  final String documentNumber;
+  final String category;
+
+  StatementDetail(
+    this.date,
+    this.name,
+    this.debit,
+    this.credit,
+    this.balance,
+    this.description,
+    this.documentNumber,
+    this.category,
+  );
+}
+
 Future<List<Client>> fetchClients() async {
   await Future.delayed(const Duration(seconds: 2));
 
@@ -43,4 +65,22 @@ Future<List<Ledger>> fetchLedgersFromApi() async {
   await Future.delayed(const Duration(seconds: 2));
 
   return List<Ledger>.generate(20, (index) => Ledger('Ledger $index'));
+}
+
+Future<List<StatementDetail>> fetchStatementDetailsFromApi() async {
+  // await Future.delayed(const Duration(seconds: 2));
+
+  return List<StatementDetail>.generate(
+    20,
+    (index) => StatementDetail(
+      '2021-01-01',
+      'Statement Detail $index',
+      100.0,
+      100.0,
+      100.0,
+      'This is a description of statement detail $index',
+      '12345',
+      'Sales',
+    ),
+  );
 }

@@ -17,6 +17,7 @@ class _SelectPeriodState extends State<SelectPeriod> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kScaffoldBackgroundColor,
       appBar: AppBar(
         title: const Text('Ledger Statement'),
       ),

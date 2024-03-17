@@ -1,5 +1,6 @@
 import 'package:finac_mobile_app/Components/ClientComponent.dart';
 import 'package:finac_mobile_app/Components/DashboardCardComponent.dart';
+import 'package:finac_mobile_app/Constants/constants.dart';
 import 'package:finac_mobile_app/dummy.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,9 @@ class ClientDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kScaffoldBackgroundColor,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: Text('Client Dashboard'),
         leadingWidth: 24,
       ),

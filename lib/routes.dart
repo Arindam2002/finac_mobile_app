@@ -1,5 +1,7 @@
+import 'package:finac_mobile_app/Screens/Authentication/login_screen.dart';
 import 'package:finac_mobile_app/Screens/ClientReports/SelectPeriod.dart';
 import 'package:finac_mobile_app/Screens/ClientReports/ledger_statement_screen.dart';
+import 'package:finac_mobile_app/Screens/ClientReports/statement.dart';
 import 'package:finac_mobile_app/Screens/SplashScreen/splash_screen.dart';
 import 'package:finac_mobile_app/main.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,7 @@ Map<String, WidgetBuilder> getRoutes() {
   return {
     '/': (context) => const MyHomePage(title: 'Client List'),
     '/splashScreen': (context) => SplashScreen(),
+    '/loginScreen': (context) => LoginScreen(),
     '/clientDashboard': (context) {
       final Client client =
       ModalRoute.of(context)!.settings.arguments as Client;
@@ -29,5 +32,6 @@ Map<String, WidgetBuilder> getRoutes() {
     },
     '/ledgerStatement': (context) => LedgerStatement(),
     '/selectPeriod': (context) => SelectPeriod(),
+    '/statement': (context) => Statement(),
   };
 }
