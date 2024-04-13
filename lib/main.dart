@@ -1,8 +1,9 @@
 import 'package:finac_mobile_app/Constants/constants.dart';
+import 'package:finac_mobile_app/aes.dart';
 import 'package:finac_mobile_app/dummy.dart';
 import 'package:finac_mobile_app/routes.dart';
 import 'package:flutter/material.dart';
-
+import 'package:encrypt/encrypt.dart' as encrypt;
 import 'Components/ClientCard.dart';
 
 void main() {
